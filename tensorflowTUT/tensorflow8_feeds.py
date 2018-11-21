@@ -9,9 +9,9 @@ Please note, this code is only for python 3+. If you are using python 2+, please
 from __future__ import print_function
 import tensorflow as tf
 
-input1 = tf.placeholder(tf.float32)
+input1 = tf.placeholder(tf.float32)   #placeholder就是在sess.run的时候再用feed_dict给出传入值
 input2 = tf.placeholder(tf.float32)
 output = tf.multiply(input1, input2)
 
 with tf.Session() as sess:
-    print(sess.run(output, feed_dict={input1: [7.], input2: [2.]}))
+    print(sess.run(output, feed_dict={input1: [7.], input2: [2.]})) #你用了placeholder就等于和feed_dict是绑定的
